@@ -10,7 +10,7 @@ Use a cronjob to trigger this IP update script periodically, and reload your ngi
 
 Directly execute the script, you can clone this repository, or directly download the [script](https://github.com/PeterDaveHello/nginx-cloudflare-set-real-ip/raw/master/generate.sh) to where you want to execute it.
 
-The generated config will be written to `/etc/nginx/conf.d/cloudflare-set-real-ip.conf`, please make you have the write permission to the locaion.
+The generated config will be written to `/etc/nginx/conf.d/cloudflare-set-real-ip.conf`, please make you have the write permission to the locaion. You can also set the config location by using variable `$cf_ip_config`.
 
 To prevent burst request in the same time, cron mode is supported, with parameter `--cron`, the script will randomly sleep within 15 mins before fetching the latest IP ranges.
 
