@@ -16,6 +16,14 @@ To prevent burst request in the same time, cron mode is supported, with paramete
 
 ## Example
 
+### Oneliner script without download or git clone
+
+```sh
+wget -O- https://github.com/PeterDaveHello/nginx-cloudflare-set-real-ip/raw/master/generate.sh | cf_ip_config_path="/dev/shm/cloudflare_ip.conf" sh
+```
+
+### Cronjob
+
 `/etc/cron.d/opt/nginx-cloudflare-set-real-ip`:
 
 ```cron
